@@ -16,4 +16,22 @@ app.all('/api/reservations/*', (req, res) => {
   });
 });
 
+app.all('/api/recommendations', (req, res) => {
+  proxy.web(req, res, {
+    target: "http://localhost:3030"
+  });
+});
+
+app.all('/api/*', (req, res) => {
+  proxy.web(req, res, {
+    target: "http://localhost:3000"
+  });
+});
+
+app.all('/*', (req, res) => {
+  proxy.web(req, res, {
+    target: "http://localhost:3050"
+  });
+});
+
 app.listen(port, () => console.log(`Proxy server running on port ${port}`));
