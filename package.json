@@ -1,0 +1,24 @@
+{
+  "name": "proxysteve",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "proxy": "nodemon ./server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rent2nite/proxySteve.git"
+  },
+  "author": "Steven Papalia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rent2nite/proxySteve/issues"
+  },
+  "homepage": "https://github.com/rent2nite/proxySteve#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "http-proxy": "^1.18.0"
+  }
+}
