@@ -11,25 +11,25 @@ app.use(express.static(__dirname));
 
 app.all('/api/reservations/*', (req, res) => {
   proxy.web(req, res, {
-    target: "http://localhost:3001"
+    target: "http://18.188.118.62:3001"
   });
 });
 
 app.all('/api/recommendations', (req, res) => {
   proxy.web(req, res, {
-    target: "http://localhost:3030"
+    target: "http://3.17.207.249:3004"
   });
 });
 
 app.all('/api/*', (req, res) => {
   proxy.web(req, res, {
-    target: "http://localhost:3000"
+    target: "http://18.188.118.62:3002"
   });
 });
 
 app.all('/*', (req, res) => {
   proxy.web(req, res, {
-    target: "http://localhost:3050"
+    target: "http://3.17.207.249:3003"
   });
 });
 
